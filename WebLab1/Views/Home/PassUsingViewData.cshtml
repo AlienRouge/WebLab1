@@ -1,0 +1,36 @@
+﻿@{
+    Layout = null;
+}
+@{ 
+    var nums = ViewData["Nums"] as WebLab1.ViewModel.Operations;
+}
+<!doctype html>
+<html>
+<head>
+    <title>Hello ASP.NET MVC Core</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <link type="text/css" href="~/Style/Style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <b>Backend1</b> 
+        <a href="~/Home/Index">Home</a>
+    </header>
+    <main>
+        <h1>PassUsingViewData</h1>
+        <h3>Rand Value First : @nums.First</h3>
+        <h3>Rand Value Second : @nums.Second</h3>
+        <h3>Add :</h3>
+        <p>@nums.Sum()</p>
+        <h3>Sub :</h3>
+        <p>@nums.Sub()</p>
+        <h3>Mult :</h3>
+        <p>@nums.Mult()</p>
+        <h3>Div :</h3>
+        <p>@nums.Div()</p>
+    </main>
+    <hr>
+    <footer>© @DateTime.Now.Year - Backend1</footer>
+</body>
+</html>
