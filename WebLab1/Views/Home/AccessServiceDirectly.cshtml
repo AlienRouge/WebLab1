@@ -1,8 +1,6 @@
 ﻿@{
     Layout = null;
 }
-@using WebLab1.Services
-@inject Calc calc
 <!doctype html>
 <html>
 <head>
@@ -18,16 +16,16 @@
     </header>
     <main>
         <h1>AccessServiceDirectly</h1>
-        <h3>Rand Value First : @calc.First</h3>
-        <h3>Rand Value Second : @calc.Second</h3>
+        <h3>Rand Value First : @Model.First</h3>
+        <h3>Rand Value Second : @Model.Second</h3>
         <h3>Add :</h3>
-        <p>@calc.Sum()</p>
+        <p>@Model.Sum</p>
         <h3>Sub :</h3>
-        <p>@calc.Sub()</p>
+        <p>@Model.Sub</p>
         <h3>Mult :</h3>
-        <p>@calc.Mult()</p>
+        <p>@Model.Mult</p>
         <h3>Div :</h3>
-        <p>@calc.Div()</p>
+        <p>@Model.Div</p>
     </main>
     <hr>
     <footer>© @DateTime.Now.Year - Backend1</footer>

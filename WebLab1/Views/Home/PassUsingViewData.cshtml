@@ -1,9 +1,6 @@
 ﻿@{
     Layout = null;
 }
-@{ 
-    var nums = ViewData["Nums"] as WebLab1.ViewModel.Operations;
-}
 <!doctype html>
 <html>
 <head>
@@ -19,16 +16,16 @@
     </header>
     <main>
         <h1>PassUsingViewData</h1>
-        <h3>Rand Value First : @nums.First</h3>
-        <h3>Rand Value Second : @nums.Second</h3>
+        <h3>Rand Value First : @ViewData["First"]</h3>
+        <h3>Rand Value Second : @ViewData["Second"]</h3>
         <h3>Add :</h3>
-        <p>@nums.Sum()</p>
+        <p>@ViewData["Sum"]</p>
         <h3>Sub :</h3>
-        <p>@nums.Sub()</p>
+        <p>@ViewData["Sub"]</p>
         <h3>Mult :</h3>
-        <p>@nums.Mult()</p>
+        <p>@ViewData["Mult"]</p>
         <h3>Div :</h3>
-        <p>@nums.Div()</p>
+        <p>@ViewData["Div"]</p>
     </main>
     <hr>
     <footer>© @DateTime.Now.Year - Backend1</footer>
