@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebLab1.Services;
 
 namespace WebLab1
 {
@@ -17,6 +18,7 @@ namespace WebLab1
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddTransient<Service>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

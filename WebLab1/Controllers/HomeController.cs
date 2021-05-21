@@ -21,7 +21,7 @@ namespace WebLab1.Controllers
             sum = $"{first} + {second} = {first + second}";
             sub = $"{first} - {second} = {first - second}";
             mult = $"{first} * {second} = {first * second}";
-            div = second !=0 ? $"{first} + {second} = {first + second}": "Division by 0";
+            div = second !=0 ? $"{first} / {second} = {first / second}": "Division by 0";
         }
 
         public IActionResult Index()
@@ -59,8 +59,7 @@ namespace WebLab1.Controllers
 
         public IActionResult AccessServiceDirectly()
         {
-            var model = new Calculation(first, second, sum, sub, mult, div);
-            return View(model);
+            return View();
         }
     }
 }
